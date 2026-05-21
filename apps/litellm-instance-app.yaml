@@ -10,7 +10,7 @@ spec:
     namespace: litellm
   source:
     repoURL: https://github.com/YOUR_ORG/litellm-gitops.git
-    targetRevision: main
+    targetRevision: master
     path: litellm
   syncPolicy:
     automated:
