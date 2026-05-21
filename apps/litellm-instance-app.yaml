@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
     namespace: litellm
   source:
-    repoURL: https://github.com/YOUR_ORG/litellm-gitops.git
+    repoURL: https://github.com/Shweta-Khair/LiteLLM-Operator-ArgoCD.git
     targetRevision: master
     path: litellm
   syncPolicy:
