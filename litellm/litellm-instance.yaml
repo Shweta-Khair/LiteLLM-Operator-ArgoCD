@@ -1,0 +1,31 @@
+apiVersion: litellm.litellm.ai/v1alpha1
+kind: LiteLLMInstance
+metadata:
+  name: litellm-prod
+  namespace: litellm
+spec:
+  redisSecretRef:
+    nameRef: redis-secret
+    keys:
+      hostSecret: host
+      portSecret: port
+      passwordSecret: password
+
+  databaseSecretRef:
+    nameRef: postgres-secret
+    keys:
+      hostSecret: host
+      usernameSecret: username
+      passwordSecret: password
+      dbnameSecret: dbname
+
+  models:
+    - modelName: gpt-4o
+      identifier: gpt-4o-prod
+      requiresAuth: true
+      modelCredentials:
+        nameRef: openai-secret
+        keys:
+          apiKey: apiKey
+      liteLLMParams:
+        model: openai/gpt-4o

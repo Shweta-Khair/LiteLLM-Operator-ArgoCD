@@ -1,0 +1,15 @@
+apiVersion: auth.litellm.ai/v1alpha1
+kind: VirtualKey
+metadata:
+  name: app-service-key
+  namespace: litellm
+spec:
+  keyAlias: app-service-key
+  models:
+    - gpt-4o
+  maxBudget: "10"
+  budgetDuration: 1h
+  connectionRef:
+    instanceRef:
+      name: litellm-prod
+      namespace: litellm
