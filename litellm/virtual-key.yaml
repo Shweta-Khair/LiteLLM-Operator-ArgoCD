@@ -6,7 +6,7 @@ metadata:
 spec:
   keyAlias: app-service-key
   models:
-    - gpt-4o
+    - llama3.2-1b
   maxBudget: "10"
   budgetDuration: 1h
   connectionRef:

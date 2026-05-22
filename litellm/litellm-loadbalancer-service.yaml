@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: litellm-prod-lb
+  namespace: litellm
+spec:
+  type: LoadBalancer
+  selector:
+    app: litellm-litellm-prod
+  ports:
+    - name: http
+      protocol: TCP
+      port: 4000
+      targetPort: 4000

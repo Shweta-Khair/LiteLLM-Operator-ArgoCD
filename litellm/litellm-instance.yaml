@@ -20,12 +20,9 @@ spec:
       dbnameSecret: dbname
 
   models:
-    - modelName: gpt-4o
-      identifier: gpt-4o-prod
-      requiresAuth: true
-      modelCredentials:
-        nameRef: openai-secret
-        keys:
-          apiKey: apiKey
+    - modelName: llama3.2-1b
+      identifier: llama3.2-1b-local
+      requiresAuth: false
       liteLLMParams:
-        model: openai/gpt-4o
+        model: ollama/llama3.2:1b
+        api_base: http://ollama:11434
